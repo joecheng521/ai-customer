@@ -52,8 +52,8 @@ public class OpenAiController {
     }
 
     @CrossOrigin
-    @GetMapping(value = "/ai/generateStreamAsString", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<String> generateStreamAsString(@RequestParam(value = "message") String message) {
+    @GetMapping(value = "/ai/chat", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> chat(@RequestParam(value = "message") String message) {
         Flux<String> content = this.chatClient.prompt()
                 .user(message)
                 .system(promptSystemSpec -> promptSystemSpec.param("current_date", LocalDate.now().toString()))
