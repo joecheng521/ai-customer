@@ -1,10 +1,7 @@
-以下是根据你提供的 [pom.xml](file://E:\GitHub\ai-customer\pom.xml) 文件内容生成的简要说明文档，格式为 Markdown：
-
----
 
 # 项目概述
 
-该项目是一个基于 Spring Boot 的 Java 应用程序，用于开发 AI 客户端功能。项目的名称为 `ai-customer`，由 `com.joe` 组织开发。
+该项目是一个基于 Spring Boot 的 Java 应用程序，用于开发 AI 智能商城客服系统。项目的名称为 `ai-customer`，由 `com.joe` 组织开发。
 
 ## 基本信息
 - **项目版本**：1.0.0
