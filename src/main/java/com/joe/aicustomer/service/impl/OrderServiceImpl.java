@@ -26,10 +26,8 @@ public class OrderServiceImpl implements OrderService {
         if (OrderStatus.COMPLETED.equals(order.getStatus())) {
             return "订单已完成,不可修改";
         }
-        if (OrderStatus.SHIPPED.equals(order.getStatus()) || OrderStatus.DELIVERED.equals(order.getStatus())) {
-            return "订单尚在签收中,不可修改";
-        }
         order.setStatus(status);
+        order.setUpdatedAt(java.time.LocalDateTime.now());
         orderMapper.update(order);
         return "订单状态修改成功";
     }
